@@ -1,3 +1,3 @@
-final class <FTName | capitalCase>RepositoryImpl implements I<FTName | capitalCase>Repository {
+final class <FTName | capitalCase>RepositoryImpl implements <FTName | capitalCase>Repository {
   
 }
