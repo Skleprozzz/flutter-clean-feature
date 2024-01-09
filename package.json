@@ -1,7 +1,7 @@
 {
   "name": "flutter-clean-feature",
   "displayName": "Flutter Clean Feature",
-  "description": "",
+  "description": "Create New Clean Bloc feature for easy reusability",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
@@ -10,6 +10,10 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skleprozzz/flutter-clean-feature"
+  },
   "publisher": "AlexMamonov",
   "activationEvents": [],
   "main": "./out/extension.js",
