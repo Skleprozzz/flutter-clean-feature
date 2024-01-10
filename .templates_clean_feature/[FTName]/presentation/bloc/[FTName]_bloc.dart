@@ -6,11 +6,11 @@ part '<FTName>_state.dart';
 part '<FTName>_bloc.freezed.dart';
 
 class <FTName | capitalCase>Bloc extends Bloc<<FTName | capitalCase>Event, <FTName | capitalCase>State> {
-  <FTName | capitalCase>Bloc({required this.<FTName | capitalCase>Usecase}) : super(TestInitial()) {
+  <FTName | capitalCase>Bloc({required this.<FTName | camelCase>Usecase}) : super(TestInitial()) {
     on<<FTName | capitalCase>Event>((event, emit) {
       // TODO: implement event handler
     });
   }
 
-  final <FTName | capitalCase>UseCase <FTName | capitalCase>UseCase;
+  final <FTName | capitalCase>UseCase <FTName | camelCase>UseCase;
 }
