@@ -2,7 +2,7 @@
   "name": "flutter-clean-feature",
   "displayName": "Flutter Clean Feature",
   "description": "Create New Clean Bloc feature for easy reusability",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.85.0"
   },
