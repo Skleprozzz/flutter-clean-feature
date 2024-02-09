@@ -6,7 +6,7 @@ part '<FTName>_state.dart';
 part '<FTName>_bloc.freezed.dart';
 
 class <FTName | capitalCase>Bloc extends Bloc<<FTName | capitalCase>Event, <FTName | capitalCase>State> {
-  <FTName | capitalCase>Bloc({required this.<FTName | camelCase>Usecase}) : super(TestInitial()) {
+  <FTName | capitalCase>Bloc({required this.<FTName | camelCase>Usecase}) : super(_<FTName | capitalCase>State()) {
     on<<FTName | capitalCase>Event>((event, emit) {
       // TODO: implement event handler
     });
