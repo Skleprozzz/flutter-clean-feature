@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class <FTName | capitalCase>View extends StatelessWidget {
-  const <FTName | capitalCase>View({
+class <FTName | pascalcase>View extends StatelessWidget {
+  const <FTName | pascalcase>View({
     super.key,
   });
 

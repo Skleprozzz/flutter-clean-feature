@@ -1,4 +1,4 @@
 
-abstract interface class <FTName | capitalCase>Repository {
+abstract interface class <FTName | pascalcase>Repository {
   
 }

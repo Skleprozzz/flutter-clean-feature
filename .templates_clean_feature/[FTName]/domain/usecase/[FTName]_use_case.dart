@@ -1,6 +1,6 @@
-final class <FTName | capitalCase>UseCase {
+final class <FTName | pascalcase>UseCase {
 
-  const <FTName | capitalCase>UseCase({required this.<FTName | camelCase>Service});
+  const <FTName | pascalcase>UseCase({required this.<FTName | camelCase>Service});
 
-  final <FTName | capitalCase>Service <FTName | camelCase>Service;
+  final <FTName | pascalcase>Service <FTName | camelCase>Service;
 }

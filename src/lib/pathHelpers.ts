@@ -13,7 +13,7 @@ import { plural, singular } from "pluralize";
 // } from "change-case";
 import { match } from "x-match-expression";
 import { FileTemplate } from "../types/index.js";
-import { capitalCase, constantCase, dotCase, noCase, pathCase, sentenceCase, snakeCase } from "change-case";
+import { capitalCase, constantCase, dotCase, noCase, pathCase, sentenceCase, snakeCase, camelCase, pascalCase } from "change-case";
 // import { capitalCase, constantCase, dotCase, noCase, pathCase, sentenceCase, snakeCase } from "change-case";
 
 const replacePlaceholder = function (
@@ -38,6 +38,8 @@ const getTransformedSSFName = (replacement: string, transformer: string) =>
 const transform = (replacement: string, transformer: string) => match(removeSpecialCharacters(transformer).toLowerCase())
   .caseEqual('lowercase', replacement.toLowerCase())
   .caseEqual('uppercase', replacement.toUpperCase())
+  .caseEqual('camelcase', camelCase(replacement))
+  .caseEqual('pascalcase', pascalCase(replacement))
   .caseEqual('capitalcase', capitalCase(replacement))
   .caseEqual('constantcase', constantCase(replacement))
   .caseEqual('dotcase', dotCase(replacement))

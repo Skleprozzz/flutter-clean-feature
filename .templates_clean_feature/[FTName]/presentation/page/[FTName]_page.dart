@@ -3,17 +3,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/<FTName>_bloc.dart';
 
-class <FTName | capitalCase>Page extends StatelessWidget {
-  const <FTName | capitalCase>Page({
+class <FTName | pascalcase>Page extends StatelessWidget {
+  const <FTName | pascalcase>Page({
     super.key,
   });
 
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<<FTName | capitalCase>Bloc>(
-      create: (_) => <<FTName | capitalCase>Bloc>(),
-      child: <FTName | capitalCase>View(),
+    return BlocProvider<<FTName | pascalcase>Bloc>(
+      create: (_) => <<FTName | pascalcase>Bloc>(),
+      child: <FTName | pascalcase>View(),
     );
   }
 }

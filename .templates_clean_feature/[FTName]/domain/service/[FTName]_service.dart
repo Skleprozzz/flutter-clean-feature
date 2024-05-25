@@ -1,6 +1,6 @@
-final class <FTName | capitalCase>Service {
+final class <FTName | pascalcase>Service {
 
-  const <FTName | capitalCase>Service({required this.<FTName | camelCase>Repository});
+  const <FTName | pascalcase>Service({required this.<FTName | camelCase>Repository});
 
-  final <FTName | capitalCase>Repository <FTName | camelCase>Repository;
+  final <FTName | pascalcase>Repository <FTName | camelCase>Repository;
 }
