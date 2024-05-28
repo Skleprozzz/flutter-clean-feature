@@ -5,7 +5,7 @@ class Failure implements Exception {
   final String? responseCode;
 }
 
-sealed class <FTName | pascalcase>Failures extends Failure {
+sealed class <FTName | pascalcase>Failure extends Failure {
 
 }
 
