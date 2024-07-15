@@ -1,1 +1,0 @@
-final class <FTName | pascalcase>NetworkModel {}

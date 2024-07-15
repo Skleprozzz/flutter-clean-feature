@@ -13,7 +13,7 @@ class <FTName | pascalcase>Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<<FTName | pascalcase>Bloc>(
       create: (_) => <<FTName | pascalcase>Bloc>(),
-      child: <FTName | pascalcase>View(),
+      child: SizedBox.shrink(),
     );
   }
 }
