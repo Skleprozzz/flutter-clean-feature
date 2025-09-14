@@ -1,5 +1,4 @@
 import * as vscode from "vscode";
-import { isDirectory } from "./fsHelpers";
 
 export const readConfig = (key: string): any => {
   const config = vscode.workspace.getConfiguration("folderTemplates");
@@ -69,12 +68,3 @@ export const openAndSaveFile = async (uri: vscode.Uri | null) => {
   }
 };
 
-export const getLocalTemplatePath = () => {
-  const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
-  if (isDirectory(`${workspacePath}/.fttemplates`)) {
-    // Match any TypeScript file in the root of this workspace folder
-    return `${workspacePath}/.fttemplates`;
-    // Match any TypeScript file in `someFolder` inside this workspace folder
-  }
-  return null;
-};

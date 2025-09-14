@@ -12,7 +12,7 @@ export const getReplaceValueTuples = (variableNames: string[]) => {
       let prompt = `Enter Replace value to replace custom variable <${name}>`;
       let value;
 
-      if (name === "FTName") {
+      if (name === "FEATURE") {
         prompt = `Enter the name of your new component`;
       }
       if (defaultValue) {

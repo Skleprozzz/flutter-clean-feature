@@ -32,7 +32,9 @@ const CreateFolderStructure = async (
     return showError("No configured Folder Templates found!");
   }
 
-  const pickedTemplate = await pickTemplate(folderTemplates);
+  // const pickedTemplate = await pickTemplate(folderTemplates);
+
+  const pickedTemplate = folderTemplates[0];
 
   if (!pickedTemplate) {
     return showInfo(
@@ -55,7 +57,7 @@ const CreateFolderStructure = async (
 
   let ftNameTuple: StringReplaceTuple[] = [];
   if (!omitFTName) {
-    ftNameTuple = await getReplaceValueTuples (["FTName"]);
+    ftNameTuple = await getReplaceValueTuples (["FEATURE"]);
     //If no componentname is specified do nothing
     if (!ftNameTuple[0][1]) {
       return showInfo(

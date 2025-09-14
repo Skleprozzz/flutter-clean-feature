@@ -7,7 +7,7 @@ import CreateFolderStructure from "./commands/createFolderStructure.js";
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-  const globalTemplateCleanFolderPath = context.asAbsolutePath(".templates_clean_feature");
+  const globalTemplateCleanFolderPath = context.asAbsolutePath(".flutter_clean_feature_template");
 
   const createCleanStructure = vscode.commands.registerCommand(
     "createCleanStructure",
