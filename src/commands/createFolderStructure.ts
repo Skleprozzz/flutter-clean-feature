@@ -20,21 +20,19 @@ const CreateFolderStructure = async (
   const targetUri = await getTargetPath(resource);
 
   const templateFolderPath = [getLocalTemplatePath(), globalTemplatePath];
+
   const validPaths = templateFolderPath.filter(isDirectory) as string[];
 
-  const configTemplates: FolderTemplate[] = readConfig("structures") || [];
+  // const configTemplates: FolderTemplate[] = readConfig("structures") || [];
   const folderTemplates: FolderTemplate[] = validPaths
     .map((path: string) => getTemplatesFromFS(path))
-    .flat()
-    .concat(configTemplates);
+    .flat();
 
   if (!folderTemplates.length) {
     return showError("No configured Folder Templates found!");
   }
+  const pickedTemplate = await pickTemplate(folderTemplates);
 
-  // const pickedTemplate = await pickTemplate(folderTemplates);
-
-  const pickedTemplate = folderTemplates[0];
 
   if (!pickedTemplate) {
     return showInfo(
@@ -57,7 +55,8 @@ const CreateFolderStructure = async (
 
   let ftNameTuple: StringReplaceTuple[] = [];
   if (!omitFTName) {
-    ftNameTuple = await getReplaceValueTuples (["FEATURE"]);
+    const clearTemplateName = pickedTemplate.name.replace('[','').replace(']', '');
+    ftNameTuple = await getReplaceValueTuples ([clearTemplateName]);
     //If no componentname is specified do nothing
     if (!ftNameTuple[0][1]) {
       return showInfo(

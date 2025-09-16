@@ -70,10 +70,13 @@ export const openAndSaveFile = async (uri: vscode.Uri | null) => {
 };
 
 export const getLocalTemplatePath = () => {
+  const config = vscode.workspace.getConfiguration('flutterCleanFeature');
+  let myStringSetting = config.get<string>('myStringSetting', '.flutter_clean_feature_template');
+
   const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
-  if (isDirectory(`${workspacePath}/.flutter_clean_feature_template`)) {
+  if (isDirectory(`${workspacePath}/${myStringSetting}`)) {
     // Match any TypeScript file in the root of this workspace folder
-    return `${workspacePath}/.flutter_clean_feature_template`;
+    return `${workspacePath}/${myStringSetting}`;
     // Match any TypeScript file in `someFolder` inside this workspace folder
   }
   return null;

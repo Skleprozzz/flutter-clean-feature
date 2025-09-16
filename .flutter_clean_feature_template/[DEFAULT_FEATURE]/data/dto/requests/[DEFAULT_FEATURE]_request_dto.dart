@@ -1,0 +1,1 @@
+class <DEFAULT_FEATURE | pascalcase>RequestDto {}

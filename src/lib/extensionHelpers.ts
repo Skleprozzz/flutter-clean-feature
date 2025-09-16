@@ -43,8 +43,8 @@ export const getTemplatesFromFS = (folderPath: PathLike) => {
       if (!file.isDirectory()) {
         return null;
       }
-      const settings =
-        parseSettingsFile(`${folderPath}/${file.name}/.settings.json`) || {};
+      // const settings =
+      //   parseSettingsFile(`${folderPath}/${file.name}/.settings.json`) || {};
 
       const contents = getFolderContents(
         vscode.Uri.parse(`${folderPath}/${file.name}`)
@@ -56,8 +56,8 @@ export const getTemplatesFromFS = (folderPath: PathLike) => {
       ).filter((val) => val.fileName !== ".settings.json");
 
       return {
-        ...settings,
-        name: settings.name || file.name,
+        ...{},
+        name: file.name,
         structure,
       };
     })
@@ -99,6 +99,9 @@ export const pickTemplate = async (allStructures: FolderTemplate[]) => {
     structureName = await vscode.window.showQuickPick(
       allStructures.map((structure) => structure.name)
     );
+  }
+  else {
+    structureName = allStructures[0].name;
   }
 
   return getSelectedFolderStructure(allStructures, structureName);

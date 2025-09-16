@@ -2,7 +2,7 @@
   "name": "flutter-clean-feature",
   "displayName": "Flutter Clean Feature",
   "description": "Create New Clean Bloc feature for easy reusability",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -18,6 +18,17 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "flutter-clean-feature",
+      "properties": {
+        "flutterCleanFeature.myStringSetting": {
+          "type": "string",
+          "default": ".flutter_clean_feature_template",
+          "description": "Enter your template folder in root",
+          "scope": "window"
+        }
+      }
+    },
     "commands": [
       {
         "command": "createCleanStructure",
